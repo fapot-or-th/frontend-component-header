@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ActionRow, Button, Container, Nav, Row } from '@openedx/paragon';
-import { Close, MenuIcon } from '@openedx/paragon/icons';
-import Cookies from 'js-cookie';
-import CourseLockUp from './CourseLockUp';
-import UserMenu from './UserMenu';
-import BrandNav from './BrandNav';
-import NavDropdownMenu from './NavDropdownMenu';
+import React from "react";
+import PropTypes from "prop-types";
+import { ActionRow, Button, Container, Nav, Row } from "@openedx/paragon";
+import { Close, MenuIcon } from "@openedx/paragon/icons";
+import Cookies from "js-cookie";
+import CourseLockUp from "./CourseLockUp";
+import UserMenu from "./UserMenu";
+import BrandNav from "./BrandNav";
+import NavDropdownMenu from "./NavDropdownMenu";
 var HeaderBody = function HeaderBody(_ref) {
   var _Cookies$get;
   var logo = _ref.logo,
@@ -31,20 +31,20 @@ var HeaderBody = function HeaderBody(_ref) {
     logo: logo,
     logoAltText: logoAltText
   });
-  var domain = window.location.hostname.replace('apps', '');
-  var language = (_Cookies$get = Cookies.get('openedx-language-preference', {
+  var domain = window.location.hostname.replace("apps", "");
+  var language = (_Cookies$get = Cookies.get("openedx-language-preference", {
     domain: domain
-  })) !== null && _Cookies$get !== void 0 ? _Cookies$get : 'en';
+  })) !== null && _Cookies$get !== void 0 ? _Cookies$get : "en";
   var handleChangeLanguage = function handleChangeLanguage(event) {
     var _event$target$value;
-    var newLanguage = (_event$target$value = event.target.value) !== null && _event$target$value !== void 0 ? _event$target$value : 'en';
-    Cookies.set('openedx-language-preference', newLanguage, {
+    var newLanguage = (_event$target$value = event.target.value) !== null && _event$target$value !== void 0 ? _event$target$value : "en";
+    Cookies.set("openedx-language-preference", newLanguage, {
       domain: domain
     });
     window.location.reload();
   };
-  var fullNameTH = 'หอภาพยนตร์ (องค์การมหาชน)';
-  var fullNameEN = 'Film Archive (Public Organization)';
+  var fullNameTH = "หอภาพยนตร์ (องค์การมหาชน)";
+  var fullNameEN = "Film Archive (Public Organization)";
   return /*#__PURE__*/React.createElement(Container, {
     size: "xl",
     className: "px-2.5"
@@ -61,13 +61,7 @@ var HeaderBody = function HeaderBody(_ref) {
     "data-testid": "mobile-menu-button"
   }, "Menu") : /*#__PURE__*/React.createElement(Row, {
     className: "logo-container m-0 flex-nowrap"
-  }, renderBrandNav, /*#__PURE__*/React.createElement("div", {
-    className: "full-name-container"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "full-name-th"
-  }, fullNameTH), /*#__PURE__*/React.createElement("div", {
-    className: "full-name-en"
-  }, fullNameEN)), /*#__PURE__*/React.createElement(CourseLockUp, {
+  }, renderBrandNav, /*#__PURE__*/React.createElement(CourseLockUp, {
     outlineLink: outlineLink,
     number: number,
     org: org,
@@ -136,9 +130,9 @@ HeaderBody.defaultProps = {
   isModalPopupOpen: false,
   logo: null,
   logoAltText: null,
-  number: '',
-  org: '',
-  title: '',
+  number: "",
+  org: "",
+  title: "",
   authenticatedUserAvatar: null,
   username: null,
   isAdmin: false,
